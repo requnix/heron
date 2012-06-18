@@ -3,12 +3,16 @@ require "thor"
 require "thor/group"
 require "heron"
 
-class CLI < Thor
-  desc 'analyze', 'Give information about files in the folder'
-  def analyze
+class Downloads < Thor
+  desc 'check', 'List eligible files in the downloads folder'
+  def check
     explorer = Heron::Explorer.new('~/Downloads/complete')
     explorer.analyze
   end
+end
+
+class CLI < Thor
+  register Downloads, 'downloads', 'downloads <command>', 'Description.'
 end
 
 CLI.start

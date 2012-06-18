@@ -9,9 +9,12 @@ module Heron
     end
     
     def analyze
-      eligible_files.each do |file|
-        puts "#{File.basename(file)} => #{Identifier.what_is?(file)}"
-      end
+      eligible_files.
+        collect { |file| Identifier.what_is?(file) }.
+        group_by(&:show).each do |show, episodes|
+          puts "+- #{show}"
+          episodes.each { |episode| puts "   |- #{episode}" }
+        end
     end
     
   protected
