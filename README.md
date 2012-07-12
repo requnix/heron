@@ -1,4 +1,4 @@
-# Heron
+# Heron [![Code Climate](https://codeclimate.com/badge.png)](https://codeclimate.com/github/requnix/heron)
 
 Heron is a media sorting library (similar to dewey) that follows my own 
 organizational conventions. It is primarily useful for people who want to 
@@ -11,10 +11,7 @@ and where each file should be identifiable after the fact.
 
 ## Usage
 
-Assuming your unsorted downloads are all within the Downloads folder:
-
-    cd ~/Downloads
-    heron
+I haven't worked this out yet. Watch this repository for updates.
 
 ## Contributing
 
